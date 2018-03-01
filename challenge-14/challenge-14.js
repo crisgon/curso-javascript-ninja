@@ -12,11 +12,11 @@
   */
   console.log( 'Number Objects Array:' );
   
-  let numberObjects = [{ number: 1 }, { number: 2 }, 
-                       { number: 3 }, { number: 4 },
-                       { number: 5 }, { number: 6 },
-                       { number: 7 }, { number: 8 },
-                       { number: 9 }, { number: 10 }]
+  let numberObjects = [];
+
+  for (let i = 1; i <= 10; i++) {
+    numberObjects.push({ number: i });
+  }
   
 
   console.log(numberObjects);
@@ -41,12 +41,8 @@
   */
   console.log( '\nJust module of division by 2 or 3:' );
   
-  let justMod2Or3 = [];
-
-  justNumbers.forEach(function(item){
-    if(item%2 === 0 ||  item%3 === 0){
-      justMod2Or3.push(item);
-    }
+  let justMod2Or3 = justNumbers.filter(function(item){
+    return item%2 === 0 ||  item%3 === 0;
   });
 
   console.log(justMod2Or3);
